@@ -1,0 +1,123 @@
+:root {
+  --main-color: #ffffff;
+  --secondary-color: #000000;
+  --border-radius: 6px;
+}
+
+/* Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo";
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+/* Sign up */
+
+.welcome {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.reg-form {
+  margin: 50px auto;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 6.5%;
+  position: relative;
+}
+.reg-form::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: var(--secondary-color);
+  left: 50%;
+  transform: translate(-50%);
+}
+.reg-form img {
+  background-color: var(--main-color);
+}
+.reg-form form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reg-form form .full-name {
+  display: flex;
+}
+.reg-form form .full-name input {
+  width: 165px;
+  gap: 10px;
+}
+.reg-form form input {
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid var(--secondary-color);
+  outline: none;
+  border-radius: 30px;
+  width: 350px;
+  font-size: 18px;
+
+}
+.reg-form form input[class="submit"] {
+  cursor: pointer;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  font-size: 18px;
+  width: 200px;
+  transition: 0.4s;
+}
+.reg-form form input[class="submit"]:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+.reg-form form input::placeholder {
+  color: var(--secondary-color);
+}
+.reg-form form input:focus::placeholder {
+  color: transparent;
+}
+.new-account {
+  margin: 20px 0; 
+  font-size: 18px;
+  text-align: center;
+}
+.new-account a {
+  border-bottom: 2px solid var(--secondary-color);
+  font-weight: bold;
+}
+
+/* 
+    Signature idea
+  .logo {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translateY(-50%);
+      opacity: 0.5;
+  } */
